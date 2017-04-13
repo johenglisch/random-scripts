@@ -1,6 +1,6 @@
 #! /bin/bash
 
-auxfiles="aux bbl blg dbj dvi log nav out ps snm toc fdb_latexmk fls"
+auxfiles="aux bbl blg dbj dvi log nav out ps snm toc fdb_latexmk fls synctex.gz"
 
 texfiles="$*"
 [ -z "$texfiles" ] && texfiles="./*tex"
