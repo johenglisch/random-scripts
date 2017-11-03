@@ -12,7 +12,7 @@ fi
 IFS=';'
 for dir in $REPOS
 do
-    echo "Fetching '$dir'"
+    echo "Repo: $dir"
     (cd "$dir" && git "$@") || (echo "Failed!" >&2)
     echo
 done
