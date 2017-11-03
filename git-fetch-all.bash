@@ -13,6 +13,6 @@ IFS=';'
 for dir in $REPOS
 do
     echo "Fetching '$dir'"
-    (cd "$dir" && git fetch > /dev/null && git status -sb) || (echo "Failed!" >&2)
+    (cd "$dir" && git fetch) || (echo "Failed!" >&2)
     echo
 done
