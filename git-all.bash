@@ -13,6 +13,13 @@ IFS=';'
 for dir in $REPOS
 do
     echo "Repo: $dir"
-    (cd "$dir" && git "$@") || (echo "Failed!" >&2)
+
+    if [ -z "$*" ]
+    then
+        (cd "$dir" && git status -sb) || (echo "Failed!" >&2)
+    else
+        (cd "$dir" && git "$@") || (echo "Failed!" >&2)
+    fi
+
     echo
 done
