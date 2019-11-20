@@ -1,0 +1,46 @@
+.TH latexclean 1
+.
+.SH NAME
+.
+latexclean \- clean up auxiliary files left behind by LaTeX
+.
+.SH SYNOPSIS
+.
+.SY latexclean
+.RI [ file
+\&.\|.\.]
+.
+.SH DESCRIPTION
+.
+.B latexclean
+cleans up auxiliary files left behind by LaTeX.
+It accepts any number of
+.I *.tex
+files as arguments.
+For each
+.I *.tex
+file the program will delete all files that share the same name and uses the
+following file extensions:
+.
+.IP
+\&.aux,
+\&.bbl,
+\&.blg,
+\&.dbj,
+\&.dvi,
+\&.fdb_latexmk,
+\&.fls,
+\&.log,
+\&.nav,
+\&.out,
+\&.ps,
+\&.snm,
+\&.synctex.gz,
+\&.toc
+.
+.PP
+If no files were specified on the command-line,
+.B latexclean
+will clean up auxiliary files for all
+.I *.tex
+files found in the current working directory.

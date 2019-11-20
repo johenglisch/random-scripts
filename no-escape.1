@@ -1,0 +1,19 @@
+.TH no-escape 1
+.
+.SH NAME
+.
+no-escape \- strip ANSI formatting
+.
+.SH SYNOPSIS
+.
+.SY no-escape
+.RI [ file
+\&.\|.\|.\|]
+.
+.SH DESCRIPTION
+.
+.B no-escape
+reads an input stream from a list of files (or standard input, if no files were
+specified) and prints it back to standard output, after removing ANSI escape
+sequences related to formatting, i.e.\&
+.IR \ex1b[...m .

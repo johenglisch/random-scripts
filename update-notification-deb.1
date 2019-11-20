@@ -1,0 +1,26 @@
+.TH update-notification-deb 1
+.
+.SH NAME
+.
+update-notification-deb \- notify about updates
+.
+.SH SYNOPSIS
+.
+.SY update-notification-deb
+.
+.SH DESCRIPTION
+.
+.B update-notification-deb
+shows a desktop notification if there are new updates (on Debian or other
+distributions using
+.BR apt-get (8)).
+.
+.PP
+Note that the script does not refresh the package database.
+It is assumed that the package database is kept up-to-date by other means, e.g.
+a cronjob.
+.
+.SH SEE ALSO
+.
+.IR cron (8),
+.IR anacron (8)

@@ -1,0 +1,33 @@
+.TH url-watch 1
+.
+.SH NAME
+.
+url-watch \- play a video from a URL in the clipboard
+.
+.SH SYNOPSIS
+.
+.SY url-watch
+.
+.SH DESCRIPTION
+.
+.B url-watch
+reads a URL from the clipboard and attempts to play it using
+.IR mpv (1).
+The choice of media player can be overridden using the
+.RB $ MPLAYER
+environment variable.
+.
+.PP
+This program depends on
+.IR xclip (1).
+.
+.SH ENVIRONMENT
+.
+.TP
+.B MPLAYER
+Sets the media player used play the video.  The default is
+.IR mpv (1).
+.
+.SH SEE ALSO
+.IR mpv (1),
+.IR xclip (1)

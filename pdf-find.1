@@ -1,0 +1,41 @@
+.TH pdf-find 1
+.
+.SH NAME
+.
+pdf-find \- view a PDF file somewhere on the system
+.
+.SH SYNOPSIS
+.
+.SY pdf-find
+.
+.SH DESCRIPTION
+.
+.B pdf-find
+prompts the user to choose on a PDF file found on the system using
+.IR dmenu (1)
+and displays the file in
+.IR zathura (1).
+The choice of PDF viewer can be overridden using the
+.RB $ PDFVIEWER
+environment variable.
+.
+.PP
+Note:
+.B pdf-find
+uses
+.IR locate (1)
+to find PDF files on the system, so make sure to keep your file index
+up-to-date with
+.IR updatedb (8).
+.
+.SH ENVIRONMENT
+.
+.TP
+.B PDFVIEWER
+Sets the program used to view the pdf.  The default is
+.IR zathura (1).
+.
+.SH SEE ALSO
+.IR dmenu (1),
+.IR locate (1),
+.IR zathura (1)
