@@ -3,10 +3,16 @@
 PREFIX="${PREFIX:-$HOME/.local}"
 MANPREFIX="${MANPREFIX:-$PREFIX/share/man}"
 
-scripts="healthy-legs.bash latexclean.sh no-escape.sh pdf-find.sh url-watch.sh update-notification-deb.sh wname.sh"
+scripts="healthy-legs.sh
+latexclean.sh
+no-escape.sh
+pdf-find.sh
+url-watch.sh
+update-notification-deb.sh
+wname.sh"
 
 
-for f in $scripts
+echo "$scripts" | while read -r f
 do
     bin_target="$PREFIX/bin/${f%.*}"
     man_target="$MANPREFIX/man1/${f%.*}.1"
