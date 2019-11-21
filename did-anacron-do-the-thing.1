@@ -1,0 +1,30 @@
+.TH did-anacron-do-the-thing 1
+.
+.SH NAME
+.
+did-anacron-do-the-thing \- print current status of anacron
+.
+.SH SYNOPSIS
+.
+.SY did-anacron-do-the-thing
+.
+.SH DESCRIPTION
+.
+.B did-anacron-do-the-thing
+prints some status information about
+.IR anacron (8).
+.
+.PP
+For each anacron job,
+.B did-anacron-do-the-thing
+outputs the date, when the job was last run.
+Additionally, it prints
+.IR anacron (8)'s
+pid if it is running.
+.
+.PP
+.B Note:
+.B did-anacron-do-the-thing
+works by reading
+.IR anacron (8)'s
+timestamp files, so you most likely need root privileges to run this program.
