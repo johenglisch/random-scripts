@@ -1,0 +1,55 @@
+.TH clone-url 1
+.
+.SH NAME
+.
+clone-url \- clone git repository into a central folder
+.
+.SH SYNOPSIS
+.
+.SY clone-url
+.I url
+.
+.SH DESCRIPTION
+.
+.B clone-url
+clones
+.IR git (1)
+repositories from services such as GitHub, Bitbucket, etc. into a central
+folder defined in the
+.RB $ REPOS_DIR
+environment variable
+.RB ($ HOME\fR/repos\fP
+by default).
+.
+.PP
+The program creates a subfolder for the user name and within that a separate
+subfolder for the actual repository.  For example, the repository
+.
+.IP
+https://github.com/python/cpython
+.
+.PP
+is cloned into
+.RB $ REPOS_DIR\fR/python/cpython.
+.
+.PP
+The user name and repository name are determined by splitting the URL across
+slashes
+.BR / .
+Alternatively the username may be preceded by a colon
+.B :
+to support cloning repositories over
+.IR ssh (1),
+e.g.
+.IP
+git@github.com:python/cpython
+.
+.SH ENVIRONMENT
+.
+.TP
+.B REPOS_DIR
+The root directory for
+.IR git (1)
+repositories.  Defaults to
+.RB $ HOME\fR/repos\fP
+if unset.

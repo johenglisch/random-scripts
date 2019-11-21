@@ -3,7 +3,8 @@
 PREFIX="${PREFIX:-$HOME/.local}"
 MANPREFIX="${MANPREFIX:-$PREFIX/share/man}"
 
-scripts="healthy-legs.sh
+scripts="clone-url.sh
+healthy-legs.sh
 latexclean.sh
 no-escape.sh
 pdf-find.sh
