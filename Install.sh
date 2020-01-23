@@ -4,6 +4,7 @@ PREFIX="${PREFIX:-$HOME/.local}"
 MANPREFIX="${MANPREFIX:-$PREFIX/share/man}"
 
 scripts="clone-url.sh
+ensmallen-video.sh
 healthy-legs.sh
 latexclean.sh
 no-escape.sh

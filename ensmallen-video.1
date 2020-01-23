@@ -1,0 +1,35 @@
+.TH ensmallen-video 1
+.
+.SH NAME
+.
+ensmallen-video \- scale down video from 1080p to 720p
+.
+.SH SYNOPSIS
+.
+.SY ensmallen-video
+.I filename
+.
+.SH DESCRIPTION
+.
+.B ensmallen-video
+scales a video with a 1920x1080 resolution down to 1280x720.
+Other files are left untouched.
+.
+.PP
+.
+During the conversion process, a temporary file will be created in the same
+folder where the original file was found.
+The location can be customised using the
+.IB $ TMPDIR
+environment variable.
+If the conversion succeeds, the original file is overwritten with the temporary
+file.
+.
+.SH ENVIRONMENT
+.
+.TP
+.B TMPDIR
+Location of the temp file (same folder as the original file by default).
+.
+.SH SEE ALSO
+.IR ffmpeg (1)

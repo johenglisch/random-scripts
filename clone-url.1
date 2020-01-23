@@ -23,14 +23,15 @@ by default).
 .
 .PP
 The program creates a subfolder for the user name and within that a separate
-subfolder for the actual repository.  For example, the repository
+subfolder for the actual repository.
+For example, the repository
 .
 .IP
 https://github.com/python/cpython
 .
 .PP
 is cloned into
-.RB $ REPOS_DIR\fR/python/cpython.
+.RB $ REPOS_DIR\fR/python/cpython.\fP
 .
 .PP
 The user name and repository name are determined by splitting the URL across
@@ -50,6 +51,7 @@ git@github.com:python/cpython
 .B REPOS_DIR
 The root directory for
 .IR git (1)
-repositories.  Defaults to
+repositories.
+Defaults to
 .RB $ HOME\fR/repos\fP
 if unset.
