@@ -1,0 +1,33 @@
+.TH reminder 1
+.
+.SH NAME
+.
+reminder \- remind you of something
+.
+.SH SYNOPSIS
+.
+.SY reminder
+.
+.SH DESCRIPTION
+.
+.B reminder
+reads a file
+.RI ( ~/TODO
+by default) and displays its content in a
+.IR zenity (1)
+window.
+The name of the TODO file can be changed using the
+.RB $ TODO_FILE
+environment variable.
+.
+.PP
+This is intended to be run from some sort of autostart mechanism when the
+graphical environment starts (e.g.\&
+.IR ~/.xinitrc ).
+.
+.SH ENVIRONMENT
+.
+.TP
+.B TODO_FILE
+Path to the TODO file.  The default is
+.IR ~/TODO .

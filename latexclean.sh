@@ -2,15 +2,34 @@
 
 remove_aux_files()
 {
-    for ext in aux bbl blg dbj dvi log nav out ps snm toc fdb_latexmk fls synctex.gz
+    while read -r ext
     do
         rm -vf "${1%%.tex}.$ext"
-    done
+    done <<EOF
+adx
+aux
+bbl
+bcf
+blg
+fdb_latexmk
+fls
+idx
+ilg
+ind
+ldx
+log
+mw
+out
+run.xml
+sdx
+toc
+xdv
+EOF
 }
 
 if [ $# -eq 0 ]
 then
-    for file in *.tex
+    find . -name '*.tex' | while read -r file
     do
         remove_aux_files "$file"
     done

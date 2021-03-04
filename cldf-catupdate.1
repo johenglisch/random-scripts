@@ -1,0 +1,36 @@
+.TH cldf-catupdate 1
+.
+.SH NAME
+.
+cldf-catupdate \- update CLDF catalogs
+.
+.SH SYNOPSIS
+.
+.SY cldf-catupdate
+.
+.SH DESCRIPTION
+.
+.B cldf-catupdate
+fetches the latest version of the CLDF catalogs using
+.IR git (1)
+and checks out the tag with the latest version (according to
+.IR sort (1)
+.BR \-V ).
+.
+.SH ENVIRONMENT
+.
+.TP
+.B XDG_CONFIG_HOME
+Folder for user-specific configuration files
+.RI ( ~/.config
+by default).
+.
+.SH FILES
+.
+.TP
+.BI \fR$\fPXDG_CONFIG_HOME /cldf/catalog.ini
+Contains the paths where the CLDF catalogs are located.
+.
+.SH SEE ALSO
+.
+.IR git(1)
