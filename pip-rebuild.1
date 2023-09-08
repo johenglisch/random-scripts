@@ -1,0 +1,36 @@
+.TH pip-rebuild 1
+.
+.SH NAME
+.
+pip-rebuild \- rebuilds your user pip packages
+.
+.SH SYNOPSIS
+.
+.SY pip-rebuild
+.
+.SH DESCRIPTION
+.
+.B pip-rebuild
+uninstalls all
+.IR pip (1)
+packages in your
+.I ~/.local
+prefix and installs all packages specified in your package list file.
+.
+.PP
+The program will show a summary of which packages are being removed and
+installed and ask for confirmation before doing anything.
+Still, caution is advised when using this program.
+.
+.SH THE PACKAGE LIST FILE
+.
+The package list is stored in a file called
+.I pip-packages.txt
+located in
+.RB $ XDG_CACHE_HOME
+.RI ( ~/.cache
+by default).
+Every line contains one package name.
+Empty lines and lines starting with a hash symbol
+.I #
+are ignored.

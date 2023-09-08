@@ -19,6 +19,7 @@ healthy-legs.sh
 latexclean.sh
 no-escape.sh
 pdf-find.sh
+pip-rebuild.pl
 reminder.sh
 update-notification-deb.sh
 url-watch.sh

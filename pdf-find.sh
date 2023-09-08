@@ -1,5 +1,5 @@
 #!/bin/sh
 
-locate '*.pdf' \
+exec locate '*.pdf' \
     | dmenu -i -l 15 \
     | xargs -r -I {} "${PDFVIEWER:-zathura}" '{}'
