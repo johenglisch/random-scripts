@@ -2,9 +2,14 @@
 
 get_clipboard()
 {
-    xclip -o -selection clipboard 2>/dev/null \
-        || xclip -o -selection primary 2>/dev/null \
-        || xclip -o -selection secondary
+    if [ "$XDG_SESSION_TYPE" = wayland ]
+    then
+        wl-paste
+    else
+        xclip -o -selection clipboard 2>/dev/null \
+            || xclip -o -selection primary 2>/dev/null \
+            || xclip -o -selection secondary
+    fi
 }
 
 url="$(get_clipboard)"
