@@ -1,0 +1,48 @@
+.TH tagesscahu-themen 1
+.
+.SH NAME
+.
+tagesschau-themen \- prints the topic list for the Tagesschau.
+.
+.SH SYNOPSIS
+.
+.SY tagesschau-themen
+.RI [ isodate\fR]\fP
+.
+.SH DESCRIPTION
+.
+The podcast version of the 8 o'clock news at
+.I Tagesschau
+used to come with a neat little topic list that I used to decide whether I want
+to actually watch the episode or not.
+For some reason that list has been removed from the RSS feed a while ago.
+.
+.PP
+.B tagesschau-themen
+downloads the topic list of the latest from the
+.I Tagesschau
+website and prints it to standard output.
+To avoid redownloading the same list multiple times, the topic list is saved
+on disk.
+.
+.PP
+It is also possible to view previously saved topic lists by adding the date
+in
+.I "ISO 8601"
+format
+. RI ( YYYY-MM-DD\fR)\fP
+as a command-line argument.
+.
+.SH THE TOPIC LIST FILE
+.
+Previously downloaded topics are stored in
+.I tagesschau-themen/themen.txt
+within your
+.RB $ XDG_DATA_HOME
+directory
+.RI ( ~/.local/share
+by default).
+.
+.SH SEE ALSO
+.
+.I https://www.tagesschau.de/

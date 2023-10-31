@@ -3,7 +3,7 @@ use 5.016;
 use warnings;
 use strict;
 
-my $cache_dir = $ENV{'XDG_CACHE_HOME'} || ($ENV{'HOME'} . '/.cache');
+my $cache_dir = $ENV{'XDG_CONFIG_HOME'} || ($ENV{'HOME'} . '/.config');
 my $package_file = $cache_dir . '/pip-packages.txt';
 
 # XXX: maybe allow for multiple packages on the same line? (space-separated)

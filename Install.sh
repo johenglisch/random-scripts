@@ -26,6 +26,7 @@ no-escape.sh
 pdf-find.sh
 pip-rebuild.pl
 reminder.sh
+tagesschau-themen.py
 update-notification-deb.sh
 url-watch.sh
 vish.sh
