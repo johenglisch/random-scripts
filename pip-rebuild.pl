@@ -13,9 +13,12 @@ close $fptr;
 chomp @packages;
 @packages = grep !/^\s*#|^\s*$/, @packages;
 
-my @installed = `pip freeze --user`;
+my @installed = `pip list --user`;
+# get rid of the header
+shift @installed;
+shift @installed;
 chomp @installed;
-s/=.*// foreach (@installed);
+s/\s+.*// foreach (@installed);
 
 say 'REMOVING the following packages:';
 say join(' ', @installed);
@@ -30,7 +33,7 @@ exit if ($answer ne 'y');
 my $shell_result = 0;
 if (scalar @installed != 0)
 {
-    $shell_result = system qw(pip uninstall --yes --break-system-packages), @installed;
+    $shell_result = system qw(pip uninstall --yes), @installed;
 }
 if ($shell_result != 0)
 {
@@ -38,7 +41,7 @@ if ($shell_result != 0)
     exit 1;
 }
 
-$shell_result = system qw(pip install --user --break-system-packages), @packages;
+$shell_result = system qw(pip install --user --requirement), $package_file;
 if ($shell_result != 0)
 {
     say 'something went wrong...';
