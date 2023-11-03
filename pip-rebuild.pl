@@ -33,7 +33,7 @@ exit if ($answer ne 'y');
 my $shell_result = 0;
 if (scalar @installed != 0)
 {
-    $shell_result = system qw(pip uninstall --yes), @installed;
+    $shell_result = system qw(pip uninstall --yes --break-system-packages), @installed;
 }
 if ($shell_result != 0)
 {
@@ -41,7 +41,7 @@ if ($shell_result != 0)
     exit 1;
 }
 
-$shell_result = system qw(pip install --user --requirement), $package_file;
+$shell_result = system qw(pip install --break-system-packages --user -r), $package_file;
 if ($shell_result != 0)
 {
     say 'something went wrong...';
