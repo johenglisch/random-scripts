@@ -14,7 +14,10 @@ do
 done <<EOF
 cldf-catupdate.sh
 clone-url.sh
+dmenu-open-github.pl
+doibib.sh
 ensmallen-video.sh
+folder-opener-5000.sh
 healthy-legs.sh
 latexclean.sh
 no-escape.sh
@@ -22,6 +25,7 @@ pdf-find.sh
 pip-rebuild.pl
 reminder.sh
 tagesschau-themen.py
+unicode-names.py
 update-notification-deb.sh
 url-watch.sh
 vish.sh
