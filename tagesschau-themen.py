@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.request import urlopen
 
 
-RE_ROUTE = re.compile(r'"teaser__link" href="(/multimedia/sendung/tagesschau_20_uhr/ts-[0-9]+\.html)')
+RE_ROUTE = re.compile(r'"teaser__link"[ \n]*href="(/multimedia/sendung/tagesschau_20_uhr/ts-[0-9]+\.html)')
 RE_DATE = re.compile(r'class="teaser__date">[ \n]*(\d+)\.(\d+)\.(\d+)')
 RE_TOPICS = re.compile(
     '<p><strong>Themen der Sendung:</strong>.*?</p>',
