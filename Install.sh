@@ -17,14 +17,14 @@ do
     manpage="${f%.*}.1"
     test -f "$manpage" && cp -v "$manpage" "$MANPREFIX/man1"
 done <<EOF
-cldf-catupdate.sh
+cldf-catupdate.pl
 clone-url.sh
 dmenu-open-github.pl
 doibib.sh
 ensmallen-video.sh
 folder-opener-5000.sh
 healthy-legs.sh
-latexclean.sh
+latexclean.pl
 no-escape.sh
 pdf-find.sh
 pip-rebuild.pl

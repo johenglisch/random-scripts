@@ -12,14 +12,14 @@ do
     test -f "$bin_target" && rm -v "$bin_target"
     test -f "$man_target" && rm -v "$man_target"
 done <<EOF
-cldf-catupdate.sh
+cldf-catupdate.pl
 clone-url.sh
 dmenu-open-github.pl
 doibib.sh
 ensmallen-video.sh
 folder-opener-5000.sh
 healthy-legs.sh
-latexclean.sh
+latexclean.pl
 no-escape.sh
 pdf-find.sh
 pip-rebuild.pl
