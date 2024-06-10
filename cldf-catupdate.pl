@@ -49,7 +49,7 @@ for my $line (@lines) {
     my @tags = qx(git -C $repo tag);
     chomp @tags;
     # we don's switch to alphas and prereleases
-    @tags = grep /^v?(\d+)?(\.\d+)$/, @tags;
+    @tags = grep /^v?(\d+)(\.\d+)?(\.\d+)?$/, @tags;
     next if (scalar @tags == 0);
 
     @tags = sort { -&cmpver($a, $b) } @tags;
