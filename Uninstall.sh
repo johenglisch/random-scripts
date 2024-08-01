@@ -18,6 +18,7 @@ dmenu-open-github.pl
 doibib.sh
 ensmallen-video.sh
 folder-opener-5000.sh
+gui-here.sh
 healthy-legs.sh
 latexclean.pl
 no-escape.sh
