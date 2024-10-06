@@ -41,14 +41,13 @@ sub cmpver {
     }
 }
 
-my %clones;
 for my $line (@lines) {
     my ($name, $repo) = split /\s*=\s*/, $line, 2;
     system 'git', '-C', $repo, 'fetch';
 
-    my @tags = qx(git -C $repo tag);
+    my @tags = `git -C $repo tag`;
     chomp @tags;
-    # we don's switch to alphas and prereleases
+    # we don't switch to alphas and prereleases
     @tags = grep /^v?(\d+)(\.\d+)?(\.\d+)?$/, @tags;
     next if (scalar @tags == 0);
 

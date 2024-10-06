@@ -14,13 +14,10 @@ sub run_command
     close PIPE_IN;
     my $answer = <PIPE_OUT>;
     close PIPE_OUT;
-    if (defined $answer)
-    {
+    if (defined $answer) {
         chomp $answer;
         $answer;
-    }
-    else
-    {
+    } else {
         '';
     }
 }
@@ -29,15 +26,14 @@ sub run_command
 my $cache_dir = $ENV{'XDG_CACHE_HOME'} || glob('~/.cache');
 my $history_file = "$cache_dir/github-links.txt";
 
-open FILE, $history_file;
-my @repo_strings = <FILE>;
-close FILE;
+open my $fh, '<', $history_file;
+my @repo_strings = <$fh>;
+close $fh;
 
 my %history;
 
 chomp @repo_strings;
-foreach my $line (@repo_strings)
-{
+foreach my $line (@repo_strings) {
     my ($orga, $repo) = split '/', $line;
     push @{$history{$orga}}, $repo;
 }
@@ -48,12 +44,9 @@ my $orga = &run_command('dmenu -p orga', $orgas_string);
 exit if ($orga eq '');
 
 my @repos;
-if (defined $history{$orga})
-{
+if (defined $history{$orga}) {
     @repos = @{$history{$orga}};
-}
-else
-{
+} else {
     @repos = ();
 }
 
@@ -66,9 +59,9 @@ unless (
     defined $history{$orga}
     && grep(/^\Q$repo\E$/, @{$history{$orga}}))
 {
-    open FILE, '>>', $history_file;
-    say FILE "$orga/$repo";
-    close FILE;
+    open my $fh, '>>', $history_file;
+    say $fh "$orga/$repo";
+    close $fh;
 }
 
 system 'xdg-open', "https://github.com/$orga/$repo";
