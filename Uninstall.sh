@@ -14,6 +14,7 @@ do
 done <<EOF
 cldf-catupdate.pl
 clone-url.sh
+dmenu-emoji.pl
 dmenu-open-github.pl
 doibib.sh
 ensmallen-video.sh
