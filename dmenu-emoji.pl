@@ -1654,7 +1654,7 @@ my $EMOJIS = <<'EMOJILIST';
 🇦🇩: flag: Andorra
 🇦🇪: flag: United Arab Emirates
 🇦🇫: flag: Afghanistan
-🇦🇬: flag: Antigua & Barbuda
+🇦🇬: flag: Antigua and Barbuda
 🇦🇮: flag: Anguilla
 🇦🇱: flag: Albania
 🇦🇲: flag: Armenia
@@ -1667,7 +1667,7 @@ my $EMOJIS = <<'EMOJILIST';
 🇦🇼: flag: Aruba
 🇦🇽: flag: Åland Islands
 🇦🇿: flag: Azerbaijan
-🇧🇦: flag: Bosnia & Herzegovina
+🇧🇦: flag: Bosnia and Herzegovina
 🇧🇧: flag: Barbados
 🇧🇩: flag: Bangladesh
 🇧🇪: flag: Belgium
@@ -1715,7 +1715,7 @@ my $EMOJIS = <<'EMOJILIST';
 🇩🇲: flag: Dominica
 🇩🇴: flag: Dominican Republic
 🇩🇿: flag: Algeria
-🇪🇦: flag: Ceuta & Melilla
+🇪🇦: flag: Ceuta and Melilla
 🇪🇨: flag: Ecuador
 🇪🇪: flag: Estonia
 🇪🇬: flag: Egypt
@@ -1744,13 +1744,13 @@ my $EMOJIS = <<'EMOJILIST';
 🇬🇵: flag: Guadeloupe
 🇬🇶: flag: Equatorial Guinea
 🇬🇷: flag: Greece
-🇬🇸: flag: South Georgia & South Sandwich Islands
+🇬🇸: flag: South Georgia and South Sandwich Islands
 🇬🇹: flag: Guatemala
 🇬🇺: flag: Guam
 🇬🇼: flag: Guinea-Bissau
 🇬🇾: flag: Guyana
 🇭🇰: flag: Hong Kong Sar China
-🇭🇲: flag: Heard & Mcdonald Islands
+🇭🇲: flag: Heard and Mcdonald Islands
 🇭🇳: flag: Honduras
 🇭🇷: flag: Croatia
 🇭🇹: flag: Haiti
@@ -1775,7 +1775,7 @@ my $EMOJIS = <<'EMOJILIST';
 🇰🇭: flag: Cambodia
 🇰🇮: flag: Kiribati
 🇰🇲: flag: Comoros
-🇰🇳: flag: St. Kitts & Nevis
+🇰🇳: flag: St. Kitts and Nevis
 🇰🇵: flag: North Korea
 🇰🇷: flag: South Korea
 🇰🇼: flag: Kuwait
@@ -1835,7 +1835,7 @@ my $EMOJIS = <<'EMOJILIST';
 🇵🇭: flag: Philippines
 🇵🇰: flag: Pakistan
 🇵🇱: flag: Poland
-🇵🇲: flag: St. Pierre & Miquelon
+🇵🇲: flag: St. Pierre and Miquelon
 🇵🇳: flag: Pitcairn Islands
 🇵🇷: flag: Puerto Rico
 🇵🇸: flag: Palestinian Territories
@@ -1856,7 +1856,7 @@ my $EMOJIS = <<'EMOJILIST';
 🇸🇬: flag: Singapore
 🇸🇭: flag: St. Helena
 🇸🇮: flag: Slovenia
-🇸🇯: flag: Svalbard & Jan Mayen
+🇸🇯: flag: Svalbard and Jan Mayen
 🇸🇰: flag: Slovakia
 🇸🇱: flag: Sierra Leone
 🇸🇲: flag: San Marino
@@ -1864,13 +1864,13 @@ my $EMOJIS = <<'EMOJILIST';
 🇸🇴: flag: Somalia
 🇸🇷: flag: Suriname
 🇸🇸: flag: South Sudan
-🇸🇹: flag: São Tomé & Príncipe
+🇸🇹: flag: São Tomé and Príncipe
 🇸🇻: flag: El Salvador
 🇸🇽: flag: Sint Maarten
 🇸🇾: flag: Syria
 🇸🇿: flag: Eswatini
 🇹🇦: flag: Tristan Da Cunha
-🇹🇨: flag: Turks & Caicos Islands
+🇹🇨: flag: Turks and Caicos Islands
 🇹🇩: flag: Chad
 🇹🇫: flag: French Southern Territories
 🇹🇬: flag: Togo
@@ -1882,7 +1882,7 @@ my $EMOJIS = <<'EMOJILIST';
 🇹🇳: flag: Tunisia
 🇹🇴: flag: Tonga
 🇹🇷: flag: Turkey
-🇹🇹: flag: Trinidad & Tobago
+🇹🇹: flag: Trinidad and Tobago
 🇹🇻: flag: Tuvalu
 🇹🇼: flag: Taiwan
 🇹🇿: flag: Tanzania
@@ -1894,13 +1894,13 @@ my $EMOJIS = <<'EMOJILIST';
 🇺🇾: flag: Uruguay
 🇺🇿: flag: Uzbekistan
 🇻🇦: flag: Vatican City
-🇻🇨: flag: St. Vincent & Grenadines
+🇻🇨: flag: St. Vincent and Grenadines
 🇻🇪: flag: Venezuela
 🇻🇬: flag: British Virgin Islands
 🇻🇮: flag: U.S. Virgin Islands
 🇻🇳: flag: Vietnam
 🇻🇺: flag: Vanuatu
-🇼🇫: flag: Wallis & Futuna
+🇼🇫: flag: Wallis and Futuna
 🇼🇸: flag: Samoa
 🇽🇰: flag: Kosovo
 🇾🇪: flag: Yemen
