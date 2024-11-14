@@ -21,6 +21,7 @@ folder-opener-5000.sh
 gui-here.sh
 healthy-legs.sh
 latexclean.pl
+mpv-continue.pl
 no-escape.sh
 pdf-find.sh
 pip-rebuild.pl

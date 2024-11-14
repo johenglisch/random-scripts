@@ -1,0 +1,29 @@
+.TH mpv-continue 1
+.
+.SH NAME
+.
+mpv-continue \- resume video playback
+.
+.SH SYNOPSIS
+.
+.SY mpv-continue
+.I file-prefix
+.
+.SH DESCRIPTION
+.
+I developed a habit of creating a time stamp file whenever I stop watching a
+video midway through.  So the folder looks kinda like this:
+.
+.RS
+.IP \fIa-video.mp4\fP
+.IP \fIa-video-1h12m\fP
+.RE
+.
+.PP
+.B mpv-continue
+takes a common prefix between both files as an argument and tells
+.IR mpv (1)
+to resume video playback from the given time stamp.
+.
+.IP
+.I mpv-continue a-video
