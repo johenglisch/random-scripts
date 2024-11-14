@@ -44,8 +44,10 @@ sub cmpver {
 for my $line (@lines) {
     my ($name, $repo) = split /\s*=\s*/, $line, 2;
     system 'git', '-C', $repo, 'fetch';
+    exit $? if ($?);
 
     my @tags = `git -C $repo tag`;
+    exit $? if ($?);
     chomp @tags;
     # we don't switch to alphas and prereleases
     @tags = grep /^v?(\d+)(\.\d+)?(\.\d+)?$/, @tags;
@@ -54,4 +56,5 @@ for my $line (@lines) {
     @tags = sort { -&cmpver($a, $b) } @tags;
     say $repo;
     system 'git', '-C', $repo, 'checkout', $tags[0];
+    exit $? if ($?);
 }

@@ -3,10 +3,9 @@ use 5.016;
 use warnings;
 use strict;
 
-my $cache_dir = $ENV{'XDG_CONFIG_HOME'} || ($ENV{'HOME'} . '/.config');
-my $package_file = $cache_dir . '/pip-packages.txt';
+my $cache_dir = $ENV{'XDG_CONFIG_HOME'} || "$ENV{'HOME'}/.config";
+my $package_file = "$cache_dir/pip-packages.txt";
 
-# XXX: maybe allow for multiple packages on the same line? (space-separated)
 open my $fh, '<', $package_file or die $!;
 my @packages = <$fh>;
 close $fh;
@@ -14,7 +13,8 @@ chomp @packages;
 @packages = grep !/^\s*#|^\s*$/, @packages;
 
 my @installed = `pip list --user`;
-# get rid of the header
+exit $? if ($?);
+# get rid of the table header
 shift @installed;
 shift @installed;
 chomp @installed;
@@ -30,17 +30,10 @@ my $answer = <STDIN>;
 chomp $answer;
 exit if ($answer ne 'y');
 
-my $shell_result = 0;
 if (scalar @installed != 0) {
-    $shell_result = system qw(pip uninstall --break-system-packages --yes), @installed;
-}
-if ($shell_result != 0) {
-    say 'something went wrong...';
-    exit 1;
+    system qw(pip uninstall --break-system-packages --yes), @installed;
+    exit $? if ($?);
 }
 
-$shell_result = system qw(pip install --break-system-packages --ignore-installed --user -r), $package_file;
-if ($shell_result != 0) {
-    say 'something went wrong...';
-    exit 1;
-}
+system qw(pip install --break-system-packages --ignore-installed --user -r), $package_file;
+exit $? if ($?);
