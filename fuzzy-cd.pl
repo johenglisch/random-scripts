@@ -16,7 +16,7 @@ if (!@ARGV) {
 my $query = shift @ARGV;
 
 my @folders = `locate -b -- "$query"`;
-exit $? if ($?);
+exit $?>>8 if ($?);
 chomp @folders;
 @folders = grep { -d && !m|/\.| } @folders;
 
@@ -39,7 +39,7 @@ close $fzfwtr;
 my $answer = <$fzfrdr>;
 close $fzfrdr;
 waitpid $fzf, 0;
-exit $? if ($?);
+exit $?>>8 if ($?);
 exit 1 if (!defined $answer || $answer eq '' || $answer eq "\n");
 chomp $answer;
 

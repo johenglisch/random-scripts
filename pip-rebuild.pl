@@ -13,7 +13,7 @@ chomp @packages;
 @packages = grep !/^\s*#|^\s*$/, @packages;
 
 my @installed = `pip list --user`;
-exit $? if ($?);
+exit $?>>8 if ($?);
 # get rid of the table header
 shift @installed;
 shift @installed;
@@ -32,8 +32,8 @@ exit if ($answer ne 'y');
 
 if (scalar @installed != 0) {
     system qw(pip uninstall --break-system-packages --yes), @installed;
-    exit $? if ($?);
+    exit $?>>8 if ($?);
 }
 
 system qw(pip install --break-system-packages --ignore-installed --user -r), $package_file;
-exit $? if ($?);
+exit $?>>8 if ($?);

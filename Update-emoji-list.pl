@@ -21,7 +21,7 @@ my @CUSTOM = (
 # download emoji list
 
 my $raw = `curl -sLo- 'https://emojis.wiki/all-emojis/'`;
-exit $? if ($?);
+exit $?>>8 if ($?);
 
 my @matches = $raw =~ m{<span\s+class="applyemojicard\d+">([^<]*)</span>\s*<span\s+class="applyemojicard\d+">([^<]*)<}g;
 die "couldn't find emojis, maybe they've changed their website?" if (!@matches);

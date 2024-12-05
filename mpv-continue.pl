@@ -20,7 +20,7 @@ my $prefix = shift @ARGV;
 my @files = <"$prefix"*>;
 if (scalar @files == 1 && $files[0] =~ /\.(?:mkv|mp4|webm)$/) {
     system 'mpv', $files[0];
-    exit $?;
+    exit $?>>8;
 } elsif (scalar @files != 2) {
     say STDERR "there must be two files starting with $prefix";
     exit 1;
@@ -52,4 +52,4 @@ if (!defined $mpvstamp) {
 }
 
 system 'mpv', $videofile, "--start=$mpvstamp";
-exit $? if ($?);
+exit $?>>8 if ($?);
