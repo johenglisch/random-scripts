@@ -17,7 +17,9 @@ if (scalar @ARGV != 1) {
 
 my $prefix = shift @ARGV;
 
-my @files = <"$prefix"*>;
+# escape glob patterns
+$prefix =~ s/([\[\]*{}])/\\$1/g;
+my @files = glob "'$prefix*'";
 if (scalar @files == 1 && $files[0] =~ /\.(?:mkv|mp4|webm)$/) {
     system 'mpv', $files[0];
     exit $?>>8;
