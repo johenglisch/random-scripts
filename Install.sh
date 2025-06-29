@@ -18,7 +18,7 @@ do
     test -f "$manpage" && cp -v "$manpage" "$MANPREFIX/man1"
 done <<EOF
 cldf-catupdate.pl
-clone-url.sh
+clone-url.pl
 dmenu-emoji.pl
 dmenu-open-github.pl
 doibib.sh
@@ -31,6 +31,7 @@ mpv-continue.pl
 no-escape.sh
 pdf-find.sh
 pip-rebuild.pl
+readout.pl
 reminder.sh
 tagesschau-themen.py
 unicode-names.py

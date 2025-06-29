@@ -17,4 +17,4 @@ case "$doi" in
         ;;
 esac
 
-curl -sL -H 'Accept: application/x-bibtex' "$url"
+exec curl -sL -H 'Accept: application/x-bibtex' "$url"

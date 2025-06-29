@@ -20,6 +20,12 @@ exit $?>>8 if ($?);
 chomp @folders;
 @folders = grep { -d && !m|/\.| } @folders;
 
+# if we got an exact match, we jump right to it without messing with the history
+if (@folders == 1) {
+    say $folders[0];
+    exit;
+}
+
 my %history;
 if (-f $HISTFILE) {
     open my $fh, '<', $HISTFILE or die $!;
